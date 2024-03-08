@@ -1,0 +1,220 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+    font-size: calc(16 / 19.2 * 1vw);
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+    html {
+        font-size: calc(16 / 10.8 * 1vh);
+    }
+}
+
+:root {
+    --self-card-header-color: #222325;
+    --background-color:  #141416;
+    --card-color: rgb(38, 38, 46);
+    --text-color: #ffffff;
+    --body-font: 'Tajawal', sans-serif;
+    --menu-color: rgba(29, 29, 31, 255);
+    --menu-selected: rgba(85, 85, 92, 0.85);
+}
+
+body {
+    font-family: var(--body-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    user-select: none;
+    background-color: transparent;
+}
+
+.main-card {
+    display: none;
+    background: var(--background-color);
+    width: 80rem;
+    height: 50rem;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.main-container {
+    margin-top: 1rem;
+    height: 41rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-y: scroll;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    background: var(--menu-color);
+    height: 12%;
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+.icon {
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    height: 3rem;
+    width: 6rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 2.4vh;
+    background: rgba(45, 45, 48, 0.85);
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transition: 0.3s;
+    background: var(--menu-selected);
+}
+
+
+.menu-titles {
+    margin-top: 0.2rem;
+    font-size: 1.8vh;
+    font-weight: 300;
+}
+
+.user-profile {
+    margin-left: auto;
+    color: var(--text-color);
+}
+
+.menu-logo {
+    margin-left: 2rem;
+    margin-right: 10rem;
+    font-size: 3.2vh;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.profile-img {
+    width: 2.3125rem;
+    height: 2.3125rem;
+    border-radius: 20%;
+    -o-object-fit: cover;
+        object-fit: cover;
+    border: 0.125rem solid white;
+    margin-left: 0.9375rem;
+    margin-right: 2rem;
+}
+  
+.self-card {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: calc(32.08%);
+    height: 20rem;
+    font-size: 1rem;
+    background-color: var(--menu-color);
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+    transition: 0.3s ease;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+  
+.self-card:nth-child(3n+1) {
+    margin-left: 0; /* reset margin for every third self-card element */
+  }
+
+  .self-card:nth-child(-n+3) {
+    margin-top: 0;
+  }
+  
+
+.self-card-header {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 2.5rem;
+  width: 100%;
+  background: var(--background-color);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.self-car-title {
+    font-size: 2.2vh;
+    font-weight: 700;
+}
+
+.self-card-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.7vh;
+}
+
+.self-card-icons {
+    font-size: 6vh;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.content-button {
+    background-color: #3a6df0;
+    border: none;
+    padding: 0.5rem 1.625rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    width: 48.5%;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+button {
+    font-family: var(--body-font);
+    font-weight: bold;
+}
+
+
+/* Estilo para a barra de rolagem */
+::-webkit-scrollbar {
+    margin-top: 1rem;
+    width: 10px;
+    height: 100%;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(27, 88, 201);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
